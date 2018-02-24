@@ -9,4 +9,3 @@ with open("hightemp.txt", "r") as f:
         str2 = str2 + s
 
     print(str2)
-    
