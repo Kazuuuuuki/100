@@ -1,4 +1,5 @@
 import func3 as f
+#|以下のやつも消すべき??消すならもう少し正規表現が複雑になる。
 category_lines = f.category_lines()
 
 categories = []
