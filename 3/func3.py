@@ -22,4 +22,4 @@ def category_lines():
     for i in range(len(lines)):
         if (p.match(lines[i])): values.append(lines[i])
 
-    return lines
+    return values
