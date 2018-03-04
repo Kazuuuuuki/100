@@ -14,6 +14,9 @@ for i in range(len(lines)):
     if (p.search(lines[i]) and start_line == 100000):
         start_line = i
     if(i > start_line):
+        lines[i] = lines[i].replace('\'\'\'\'\'', '')
+        lines[i] = lines[i].replace('\'\'\'', '')
+
         if(p3.search(lines[i])):
             s = p3.search(lines[i])
             start_id = s.start()
@@ -28,4 +31,3 @@ for i in range(len(lines)):
         break
 
 print(values)
-

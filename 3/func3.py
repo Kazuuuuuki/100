@@ -23,3 +23,5 @@ def category_lines():
         if (p.match(lines[i])): values.append(lines[i])
 
     return values
+
+
