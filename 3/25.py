@@ -17,8 +17,8 @@ for i in range(len(lines)):
         if(p3.search(lines[i])):
             s = p3.search(lines[i])
             start_id = s.start()
-            values[lines[i][1:start_id]] = lines[i][start_id + 2:]
-            tmp = lines[i][1:start_id]
+            values[lines[i][1:start_id-1]] = lines[i][start_id + 2:]
+            tmp = lines[i][1:start_id-1]
         if(p4.match(lines[i])):
             s = p4.search(lines[i])
             end_id = s.end()

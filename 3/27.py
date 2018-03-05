@@ -1,13 +1,12 @@
 import func3 as f
 import re
 
-data = f.Engrand_data()
-lines = data.split("\n")
+
+data = f.dic_of_template_26()
 p = re.compile('(\[\[)([^]#\|]*)(]])')
 p2 = re.compile('(\[\[)([^]\|]*)(\|)([^]\|]*)(]])')
-for i in range(len(lines)):
-    tmp = re.sub(p, r'\2', lines[i])
+for key in data:
+    tmp = re.sub(p, r'\2', data[key])
     tmp = re.sub(p2, r'\4', tmp)
-    lines[i] = tmp
-    print(lines[i])
-
+    data[key] = tmp
+    print(key + ": " + data[key])
