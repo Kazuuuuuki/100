@@ -1,6 +1,6 @@
 import func3 as f
 import re
-##data全体ではなくて、25の処理に追加するのに直す
+
 data = f.Engrand_data()
 lines = data.split("\n")
 p = re.compile('{{基礎情報')
