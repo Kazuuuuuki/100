@@ -13,4 +13,4 @@ for i in range(len(data)):
 
 
 
-print(values)
+print(sorted(values.items(), key=lambda x: -x[1]))

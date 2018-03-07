@@ -1,4 +1,24 @@
 import re
+
+def frequency():
+    data = morpheme()
+    values = {}
+
+    for i in range(len(data)):
+        for j in range(len(data[i])):
+            values[data[i][j]["surface"]] = 0
+
+
+    for i in range(len(data)):
+        for j in range(len(data[i])):
+            values[data[i][j]["surface"]] += 1
+
+
+    return sorted(values.items(), key=lambda x: -x[1])
+
+
+
+
 def morpheme():
     p = re.compile('記号-空白')
     p2 = re.compile('記号-句点')
@@ -13,6 +33,8 @@ def morpheme():
             if (p.search(lines[i])): continue;
             if (end.search(lines[i])): continue;
             if(p2.search(lines[i])):
+                obj = {"surface": "。", "base": "。", "pos": "記号", "pos1": "句点"}
+                values[flag].append(obj)
                 flag += 1
                 values.append([])
             else:
